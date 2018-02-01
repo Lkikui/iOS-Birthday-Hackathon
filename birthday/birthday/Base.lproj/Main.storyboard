@@ -13,7 +13,7 @@
         <!--Calendar-->
         <scene sceneID="UAH-Sh-hmV">
             <objects>
-                <viewController id="WO6-he-YoU" sceneMemberID="viewController">
+                <viewController id="WO6-he-YoU" customClass="CalendarViewController" customModule="birthday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSC-Ae-0gg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
