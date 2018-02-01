@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zvb-bV-ejV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,55 +47,71 @@
         <!--Birthdays-->
         <scene sceneID="PBT-ZZ-eyD">
             <objects>
-                <tableViewController id="Ibf-98-Fuv" sceneMemberID="viewController">
+                <tableViewController id="Ibf-98-Fuv" customClass="BirthdayTableViewController" customModule="birthday" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mcE-Qq-GdR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="123" id="3RE-J1-V1R">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="123" id="3RE-J1-V1R" customClass="CustomCell" customModule="birthday" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3RE-J1-V1R" id="9eQ-DI-Bc7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P72-5H-DnG">
+                                            <rect key="frame" x="16" y="11" width="76" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYw-0z-AZ1">
+                                            <rect key="frame" x="16" y="33" width="76" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.9116340942222223" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-Pb-0ek">
-                                            <rect key="frame" x="93" y="15" width="50" height="21"/>
+                                            <rect key="frame" x="104" y="11" width="50" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gifts given:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB6-Vp-4XI">
-                                            <rect key="frame" x="93" y="43" width="87" height="21"/>
+                                            <rect key="frame" x="104" y="40" width="87" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWy-qo-ytp">
-                                            <rect key="frame" x="166" y="15" width="193" height="21"/>
+                                            <rect key="frame" x="161" y="11" width="193" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="giftListLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HN3-62-aiy">
-                                            <rect key="frame" x="93" y="72" width="266" height="40"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="giftListLabel" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HN3-62-aiy">
+                                            <rect key="frame" x="104" y="39" width="255" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROC-8z-T9C">
-                                            <rect key="frame" x="16" y="15" width="69" height="97"/>
-                                        </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ROC-8z-T9C" firstAttribute="leading" secondItem="9eQ-DI-Bc7" secondAttribute="leadingMargin" constant="8" id="i3t-7R-vAB"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayLabel" destination="LYw-0z-AZ1" id="Qrx-4V-t06"/>
+                                    <outlet property="giftListLabel" destination="HN3-62-aiy" id="Zqf-YM-e4j"/>
+                                    <outlet property="monthLabel" destination="P72-5H-DnG" id="Tsu-Dn-WYg"/>
+                                    <outlet property="nameLabel" destination="WWy-qo-ytp" id="pnL-Ed-9gy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -107,7 +122,7 @@
                     <navigationItem key="navigationItem" title="Birthdays" id="9h5-CS-8cQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Twk-Ty-9nZ">
                             <connections>
-                                <segue destination="Mj5-1Q-DfQ" kind="presentation" id="aTb-J8-2Rg"/>
+                                <segue destination="Mj5-1Q-DfQ" kind="presentation" identifier="addSegue" id="aTb-J8-2Rg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -138,7 +153,7 @@
         <!--Add Birthday-->
         <scene sceneID="yPM-gg-FbX">
             <objects>
-                <viewController id="Msl-9b-wf7" customClass="ViewController" customModule="birthday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Msl-9b-wf7" customClass="AddEditViewController" customModule="birthday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ITK-4L-qej">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +189,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="Msl-9b-wf7" eventType="touchUpInside" id="YY3-jG-aM2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCT-Tq-xpQ">
                                 <rect key="frame" x="119" y="94" width="240" height="30"/>
@@ -217,12 +235,21 @@
                         <viewLayoutGuide key="safeArea" id="ihy-Id-2vt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Birthday" id="n0X-v7-ZnZ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9wm-qC-RLB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9wm-qC-RLB">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="Msl-9b-wf7" id="ufS-HE-BGr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="pTc-JB-BgA" id="7yb-qX-K0I"/>
+                        <outlet property="giftsTextField" destination="ehF-0X-AyA" id="ypt-iO-JhQ"/>
+                        <outlet property="nameTextField" destination="FCT-Tq-xpQ" id="six-Nb-HtW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54n-iw-T5R" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-634.632683658171"/>
+            <point key="canvasLocation" x="894" y="-636"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lCZ-ob-UB9">

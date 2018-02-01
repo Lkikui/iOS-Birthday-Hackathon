@@ -15,6 +15,9 @@
 		AB52F8642022855300146EFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB52F8622022855300146EFB /* LaunchScreen.storyboard */; };
 		AB52F86F2022855400146EFB /* birthdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F86E2022855400146EFB /* birthdayTests.swift */; };
 		AB52F87A2022855400146EFB /* birthdayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F8792022855400146EFB /* birthdayUITests.swift */; };
+		AB52F88820229A7800146EFB /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F88720229A7800146EFB /* AddEditViewController.swift */; };
+		AB52F88A2022A14300146EFB /* BirthdayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F8892022A14300146EFB /* BirthdayTableViewController.swift */; };
+		AB52F88C2022A17000146EFB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F88B2022A17000146EFB /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		AB52F8752022855400146EFB /* birthdayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = birthdayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB52F8792022855400146EFB /* birthdayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = birthdayUITests.swift; sourceTree = "<group>"; };
 		AB52F87B2022855400146EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB52F88720229A7800146EFB /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		AB52F8892022A14300146EFB /* BirthdayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTableViewController.swift; sourceTree = "<group>"; };
+		AB52F88B2022A17000146EFB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				AB52F8562022855300146EFB /* AppDelegate.swift */,
 				AB52F8582022855300146EFB /* ViewController.swift */,
 				AB52F85A2022855300146EFB /* Main.storyboard */,
+				AB52F88720229A7800146EFB /* AddEditViewController.swift */,
+				AB52F8892022A14300146EFB /* BirthdayTableViewController.swift */,
+				AB52F88B2022A17000146EFB /* CustomCell.swift */,
 				AB52F8602022855300146EFB /* Assets.xcassets */,
 				AB52F8622022855300146EFB /* LaunchScreen.storyboard */,
 				AB52F8652022855400146EFB /* Info.plist */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB52F88820229A7800146EFB /* AddEditViewController.swift in Sources */,
 				AB52F8592022855300146EFB /* ViewController.swift in Sources */,
 				AB52F85F2022855300146EFB /* birthday.xcdatamodeld in Sources */,
 				AB52F8572022855300146EFB /* AppDelegate.swift in Sources */,
+				AB52F88C2022A17000146EFB /* CustomCell.swift in Sources */,
+				AB52F88A2022A14300146EFB /* BirthdayTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
