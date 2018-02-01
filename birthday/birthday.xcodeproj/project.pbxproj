@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BAC9F802022F1160015F336 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAC9F7F2022F1160015F336 /* UserNotifications.framework */; };
 		AB52F8572022855300146EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F8562022855300146EFB /* AppDelegate.swift */; };
 		AB52F8592022855300146EFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB52F8582022855300146EFB /* ViewController.swift */; };
 		AB52F85C2022855300146EFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB52F85A2022855300146EFB /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BAC9F7F2022F1160015F336 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		AB52F8532022855300146EFB /* birthday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = birthday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB52F8562022855300146EFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB52F8582022855300146EFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAC9F802022F1160015F336 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BAC9F7E2022F1160015F336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BAC9F7F2022F1160015F336 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB52F84A2022855300146EFB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 				AB52F86D2022855400146EFB /* birthdayTests */,
 				AB52F8782022855400146EFB /* birthdayUITests */,
 				AB52F8542022855300146EFB /* Products */,
+				3BAC9F7E2022F1160015F336 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

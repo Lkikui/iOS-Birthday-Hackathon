@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+
 
 class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
 
@@ -16,6 +18,24 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
+
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .badge];
+
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                // Notifications not allowed
+            }
+        }
+        
+        
         super.viewDidLoad()
         fetchAll()
     }
@@ -116,5 +136,7 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+   
 
 }
