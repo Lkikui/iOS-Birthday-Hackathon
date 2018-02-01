@@ -27,7 +27,7 @@ class MonthView: UIView{
         
         setupViews()
         
-        btnLeft.isEnabled = false
+        btnLeft.isEnabled = true
     }
 
     required init?(coder aDecoder: NSCoder) {
