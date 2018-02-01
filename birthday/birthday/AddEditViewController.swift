@@ -36,6 +36,16 @@ class AddEditViewController: UIViewController {
         if date != nil {
             datePicker.date = date!
         }
+        
+        // Datepicker color
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        
+        // Add Shadow to navigation bar
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.8
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 2
         // Do any additional setup after loading the view.
     }
 

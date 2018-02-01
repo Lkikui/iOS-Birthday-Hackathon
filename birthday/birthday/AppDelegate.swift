@@ -14,10 +14,33 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Change Navigation Bar background color
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = uicolorFromHex(rgbValue: 0xffffff)
+        navigationBarAppearance.barTintColor = uicolorFromHex(rgbValue: 0x282828).withAlphaComponent(1.0)
+        
+        //Navigation Bar text color
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : uicolorFromHex(rgbValue: 0x50E3C2)]
+        
+        //Tab Bar background color
+        UITabBar.appearance().barTintColor = UIColor.clear
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().tintColor = uicolorFromHex(rgbValue: 0x50E3C2)
+        
         return true
     }
 
