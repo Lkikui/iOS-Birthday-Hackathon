@@ -36,10 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : uicolorFromHex(rgbValue: 0x50E3C2)]
         
         //Tab Bar background color
-        UITabBar.appearance().barTintColor = UIColor.clear
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().barTintColor = uicolorFromHex(rgbValue: 0x282828).withAlphaComponent(1.0)
         UITabBar.appearance().tintColor = uicolorFromHex(rgbValue: 0x50E3C2)
+        
+        //Status Bar Color
+        UIApplication.shared.statusBarStyle = .lightContent
         
         return true
     }
