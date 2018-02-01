@@ -80,7 +80,11 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
         do {
             let result = try managedObjectContext.fetch(request)
             birthdays = result as! [BirthdayItem]
-        } catch {
+            birthdays = birthdays.sorted(by: { (a, b) -> Bool in
+                return a.date! < b.date!;
+        })
+            
+        }catch {
             print("\(error)")
         }
         tableView.reloadData()
