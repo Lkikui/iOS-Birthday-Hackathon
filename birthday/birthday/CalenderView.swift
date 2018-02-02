@@ -45,6 +45,7 @@ struct Style {
 
 class CalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MonthViewDelegate {
     
+    
     var numOfDaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     var currentMonthIndex: Int = 0
     var currentYear: Int = 0
@@ -112,10 +113,10 @@ class CalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
         cell.backgroundColor=UIColor.clear
+        let calcDate = indexPath.row-firstWeekDayOfMonth+2
         if indexPath.item <= firstWeekDayOfMonth - 2 {
             cell.isHidden=true
         } else {
-            let calcDate = indexPath.row-firstWeekDayOfMonth+2
             cell.isHidden=false
             cell.lbl.text="\(calcDate)"
             if calcDate < todaysDate && currentYear == presentYear && currentMonthIndex == presentMonthIndex {
@@ -126,15 +127,17 @@ class CalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
                 cell.lbl.textColor = Style.activeCellLblColor
             }
         }
+        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell=collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor=Colors.darkRed
-        let lbl = cell?.subviews[1] as! UILabel
-        lbl.textColor=UIColor.white
-    }
+    // when you click on a date, it changes the color
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell=collectionView.cellForItem(at: indexPath)
+//        cell?.backgroundColor=Colors.darkRed
+//        let lbl = cell?.subviews[1] as! UILabel
+//        lbl.textColor=UIColor.white
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)

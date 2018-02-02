@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalendarViewController.swift
 //  birthday
 //
 //  Created by Maria Teresa Rojo on 1/31/18.
@@ -14,7 +14,7 @@ enum MyTheme{
 }
 
 class CalendarViewController: UIViewController {
-
+    
     var theme = MyTheme.light
     
     override func viewDidLoad() {
@@ -32,6 +32,7 @@ class CalendarViewController: UIViewController {
         //        let rightBarBtn = UIBarButtonItem(title: "Light", Style: .plain, target: self, action: #selector(rightBarBtnAction))
         //        self.navigationController.rightBarButtonItem = rightBarBtn
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func viewWillLayoutSubviews() {

@@ -38,6 +38,8 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
         
         super.viewDidLoad()
         fetchAll()
+//        print(birthdays)
+        
         
         // Add Shadow to navigation bar
         self.navigationController?.navigationBar.layer.masksToBounds = false
