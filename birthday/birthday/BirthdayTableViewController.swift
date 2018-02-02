@@ -17,27 +17,11 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    
     override func viewDidLoad() {
-
-        let center = UNUserNotificationCenter.current()
-        let options: UNAuthorizationOptions = [.alert, .badge];
-
-        center.requestAuthorization(options: options) {
-            (granted, error) in
-            if !granted {
-                print("Something went wrong")
-            }
-        }
-        
-        center.getNotificationSettings { (settings) in
-            if settings.authorizationStatus != .authorized {
-                // Notifications not allowed
-            }
-        }
-        
-        
         super.viewDidLoad()
         fetchAll()
+        
         
         // Add Shadow to navigation bar
         self.navigationController?.navigationBar.layer.masksToBounds = false
@@ -108,9 +92,52 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
         } catch {
             print("\(error)")
         }
+        
         dismiss(animated: true, completion: nil)
         fetchAll()
+        
+        
+        
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .badge];
+        
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                print("authorization no")
+            }
+            
+        }
+
+        let alarmDate = Date(timeInterval: -86385 , since: (date))
+        
+
+        let content = UNMutableNotificationContent()
+        content.title = "Reminder"
+        content.body = "\(name)'s birthday"
+        content.sound = UNNotificationSound.default()
+        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: alarmDate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+
+
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier,
+                                            content: content, trigger: trigger)
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print("errrr: ", error)
+            }
+        })
     }
+    
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "addSegue", sender: indexPath)
