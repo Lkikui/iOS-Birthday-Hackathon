@@ -8,9 +8,18 @@
 
 import UIKit
 
+
+func uicolorFromHex(rgbValue:UInt32)->UIColor{
+    let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+    let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+    let blue = CGFloat(rgbValue & 0xFF)/256.0
+    
+    return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+}
+
 struct Colors {
-    static var darkGray = UIColor.darkGray
-    static var darkRed = UIColor.red
+    static var darkGray = uicolorFromHex(rgbValue: 0x393939)
+    static var darkRed = uicolorFromHex(rgbValue: 0xCE82BE)
 }
 
 struct Style {
@@ -34,7 +43,7 @@ struct Style {
     
     static func themeLight(){
         bgColor = UIColor.white
-        monthViewLblColor = UIColor.black
+        monthViewLblColor = uicolorFromHex(rgbValue: 0x50E3C2)
         monthViewBtnRightColor = UIColor.black
         monthViewBtnLeftColor = UIColor.black
         activeCellLblColor = UIColor.black

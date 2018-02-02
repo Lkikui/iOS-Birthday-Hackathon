@@ -39,12 +39,22 @@ class BirthdayTableViewController: UITableViewController, AddBirthdayDelegate {
         super.viewDidLoad()
         fetchAll()
         
+        self.navigationController?.navigationBar.isTranslucent = false
+        
         // Add Shadow to navigation bar
         self.navigationController?.navigationBar.layer.masksToBounds = false
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
         self.navigationController?.navigationBar.layer.shadowOpacity = 0.8
         self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         self.navigationController?.navigationBar.layer.shadowRadius = 2
+        
+        // Add shadow to tab bar
+        self.tabBarController?.tabBar.layer.masksToBounds = false
+        self.tabBarController?.tabBar.layer.shadowColor = UIColor.black.cgColor
+        self.tabBarController?.tabBar.layer.shadowOpacity = 1.0
+        self.tabBarController?.tabBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        self.tabBarController?.tabBar.layer.shadowRadius = 4
+        
     }
 
     override func didReceiveMemoryWarning() {

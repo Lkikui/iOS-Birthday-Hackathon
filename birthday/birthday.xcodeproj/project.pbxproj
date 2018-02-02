@@ -22,6 +22,7 @@
 		ABE3000020239C9700D88DE1 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FFFF20239C9700D88DE1 /* WeekdaysView.swift */; };
 		ABE3FFFC20239C7100D88DE1 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FFFB20239C7100D88DE1 /* MonthView.swift */; };
 		ABE3FFFE20239C7C00D88DE1 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FFFD20239C7C00D88DE1 /* CalenderView.swift */; };
+		CC33DA672023F6C4008B097F /* Birthday.png in Resources */ = {isa = PBXBuildFile; fileRef = CC33DA662023F6C4008B097F /* Birthday.png */; };
 		CCECE017202323D600A82835 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = CCECE016202323D600A82835 /* Button.png */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		ABE3FFFB20239C7100D88DE1 /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		ABE3FFFD20239C7C00D88DE1 /* CalenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		ABE3FFFF20239C9700D88DE1 /* WeekdaysView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		CC33DA662023F6C4008B097F /* Birthday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Birthday.png; sourceTree = "<group>"; };
 		CCECE016202323D600A82835 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				AB52F88B2022A17000146EFB /* CustomCell.swift */,
 				AB52F8602022855300146EFB /* Assets.xcassets */,
 				CCECE016202323D600A82835 /* Button.png */,
+				CC33DA662023F6C4008B097F /* Birthday.png */,
 				AB52F8622022855300146EFB /* LaunchScreen.storyboard */,
 				AB52F8652022855400146EFB /* Info.plist */,
 				AB52F85D2022855300146EFB /* birthday.xcdatamodeld */,
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC33DA672023F6C4008B097F /* Birthday.png in Resources */,
 				AB52F8642022855300146EFB /* LaunchScreen.storyboard in Resources */,
 				CCECE017202323D600A82835 /* Button.png in Resources */,
 				AB52F8612022855300146EFB /* Assets.xcassets in Resources */,
