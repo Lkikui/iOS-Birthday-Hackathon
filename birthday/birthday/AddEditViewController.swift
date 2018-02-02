@@ -40,6 +40,8 @@ class AddEditViewController: UIViewController {
         // Datepicker color
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         
+        self.navigationController?.navigationBar.isTranslucent = false
+        
         // Add Shadow to navigation bar
         self.navigationController?.navigationBar.layer.masksToBounds = false
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor

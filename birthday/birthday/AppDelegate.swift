@@ -27,14 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // Change Navigation Bar background color
+        //MARK: Navigation Bar
         let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.tintColor = uicolorFromHex(rgbValue: 0xffffff)
-        navigationBarAppearance.barTintColor = uicolorFromHex(rgbValue: 0x282828).withAlphaComponent(1.0)
+        //background
+        navigationBarAppearance.barTintColor = uicolorFromHex(rgbValue: 0x343434).withAlphaComponent(1.0)
+        navigationBarAppearance.tintColor = uicolorFromHex(rgbValue: 0xffffff) //Bar Button
         
-        //Navigation Bar text color
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : uicolorFromHex(rgbValue: 0x50E3C2)]
-        
+        //Navigation Bar font
+        let font = UIFont(name: "SnellRoundhand-Bold", size: 35)
+        navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.font: font!, NSAttributedStringKey.foregroundColor: uicolorFromHex(rgbValue: 0x50E3C2)]
+
         //Tab Bar background color
         UITabBar.appearance().barTintColor = uicolorFromHex(rgbValue: 0x282828).withAlphaComponent(1.0)
         UITabBar.appearance().tintColor = uicolorFromHex(rgbValue: 0x50E3C2)
@@ -68,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
 
     // MARK: - Core Data stack
 
