@@ -49,6 +49,8 @@ class AddEditViewController: UIViewController {
         self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         self.navigationController?.navigationBar.layer.shadowRadius = 2
         // Do any additional setup after loading the view.
+        
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,4 +69,14 @@ class AddEditViewController: UIViewController {
     }
     */
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
