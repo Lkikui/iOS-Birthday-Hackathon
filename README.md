@@ -5,9 +5,6 @@ Birthday reminder app to remind you of birthdays you need to shop for and gifts 
 Table View                                                  |  Form                                                 |  Calendar                    
 :----------------------------------------------------------:|:-----------------------------------------------------:|:--------------------------------------------------------------------:
 ![table view](screenshots/screenshot1.png "UI screenshot")  |  ![form](screenshots/screenshot2.png "UI screenshot") |  ![calendar](screenshots/screenshot3.png "UI screenshot")
-
-![table view](screenshots/screenshot1.png "UI screenshot") ![form](screenshots/screenshot2.png "UI screenshot")![calendar](screenshots/screenshot3.png "UI screenshot")
-
 _______________________________
 
 Features:
