@@ -1,4 +1,4 @@
-# iOS-Birthday-Hackathon
+# Birthday Reminder
 
 Birthday reminder app to remind you of birthdays you need to shop for and gifts that you have already given to a particular person for a prior birthday.
 
